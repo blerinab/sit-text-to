@@ -15,6 +15,8 @@
 		349AC983237B4631004E1D1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349AC981237B4631004E1D1B /* LaunchScreen.storyboard */; };
 		349AC98E237B4631004E1D1B /* Sit_Next_ToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC98D237B4631004E1D1B /* Sit_Next_ToTests.swift */; };
 		349AC999237B4631004E1D1B /* Sit_Next_ToUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC998237B4631004E1D1B /* Sit_Next_ToUITests.swift */; };
+		349AC9AE237B504C004E1D1B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC9AD237B504C004E1D1B /* Colors.swift */; };
+		349AC9B1237B529F004E1D1B /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC9B0237B529F004E1D1B /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		349AC994237B4631004E1D1B /* Sit Next ToUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sit Next ToUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		349AC998237B4631004E1D1B /* Sit_Next_ToUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sit_Next_ToUITests.swift; sourceTree = "<group>"; };
 		349AC99A237B4631004E1D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		349AC9AD237B504C004E1D1B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		349AC9B0237B529F004E1D1B /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		349AC975237B4631004E1D1B /* Sit Next To */ = {
 			isa = PBXGroup;
 			children = (
+				349AC9AF237B5294004E1D1B /* Navigation Bar */,
+				349AC9AC237B5043004E1D1B /* Utils */,
 				349AC976237B4631004E1D1B /* AppDelegate.swift */,
 				349AC978237B4631004E1D1B /* SceneDelegate.swift */,
 				349AC97A237B4631004E1D1B /* ViewController.swift */,
@@ -126,6 +132,22 @@
 				349AC99A237B4631004E1D1B /* Info.plist */,
 			);
 			path = "Sit Next ToUITests";
+			sourceTree = "<group>";
+		};
+		349AC9AC237B5043004E1D1B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				349AC9AD237B504C004E1D1B /* Colors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		349AC9AF237B5294004E1D1B /* Navigation Bar */ = {
+			isa = PBXGroup;
+			children = (
+				349AC9B0237B529F004E1D1B /* NavigationBar.swift */,
+			);
+			path = "Navigation Bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				349AC97B237B4631004E1D1B /* ViewController.swift in Sources */,
+				349AC9AE237B504C004E1D1B /* Colors.swift in Sources */,
 				349AC977237B4631004E1D1B /* AppDelegate.swift in Sources */,
 				349AC979237B4631004E1D1B /* SceneDelegate.swift in Sources */,
+				349AC9B1237B529F004E1D1B /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
