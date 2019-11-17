@@ -9,10 +9,14 @@
 import UIKit
 
 class MainView: UIView {
-
+ 
+    var shuffle: ((_ number: Int) -> Void)?
+    
     @IBOutlet private weak var numberTextField: UITextField!
     
     @IBAction private func randomize(_ sender: UIButton) {
-        // TODO:
+        if let numberText = numberTextField.text, let number = Int(numberText) {
+            shuffle?(number)
+        }
     }
 }

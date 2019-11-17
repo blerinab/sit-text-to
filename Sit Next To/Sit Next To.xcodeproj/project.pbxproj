@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341E04EE237DE13500951E89 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E04ED237DE13500951E89 /* MainNavigator.swift */; };
+		341E04F1237DE20F00951E89 /* SeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E04F0237DE20F00951E89 /* SeatsViewController.swift */; };
+		341E04F3237DED3000951E89 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E04F2237DED3000951E89 /* NavigationController.swift */; };
+		341E04F5237DEFE700951E89 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341E04F4237DEFE700951E89 /* Navigation.storyboard */; };
+		343B5377237DF6C5005A03F5 /* Shuffler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B5376237DF6C5005A03F5 /* Shuffler.swift */; };
+		343B5379237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B5378237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift */; };
+		343B537B237DFC18005A03F5 /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B537A237DFC18005A03F5 /* SeatCollectionViewCell.swift */; };
 		349AC977237B4631004E1D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC976237B4631004E1D1B /* AppDelegate.swift */; };
 		349AC979237B4631004E1D1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC978237B4631004E1D1B /* SceneDelegate.swift */; };
 		349AC980237B4631004E1D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349AC97F237B4631004E1D1B /* Assets.xcassets */; };
@@ -38,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		341E04ED237DE13500951E89 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		341E04F0237DE20F00951E89 /* SeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsViewController.swift; sourceTree = "<group>"; };
+		341E04F2237DED3000951E89 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		341E04F4237DEFE700951E89 /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
+		343B5376237DF6C5005A03F5 /* Shuffler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuffler.swift; sourceTree = "<group>"; };
+		343B5378237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		343B537A237DFC18005A03F5 /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
 		349AC973237B4631004E1D1B /* Sit Next To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sit Next To.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		349AC976237B4631004E1D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349AC978237B4631004E1D1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		341E04EF237DE1EC00951E89 /* Seats */ = {
+			isa = PBXGroup;
+			children = (
+				341E04F0237DE20F00951E89 /* SeatsViewController.swift */,
+				343B5378237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift */,
+				343B537A237DFC18005A03F5 /* SeatCollectionViewCell.swift */,
+			);
+			path = Seats;
+			sourceTree = "<group>";
+		};
 		349AC96A237B4631004E1D1B = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +129,7 @@
 		349AC975237B4631004E1D1B /* Sit Next To */ = {
 			isa = PBXGroup;
 			children = (
-				349AC9AF237B5294004E1D1B /* Navigation Bar */,
+				349AC9AF237B5294004E1D1B /* Navigation Controller */,
 				349AC9AC237B5043004E1D1B /* Utils */,
 				349AC9A6237B46F7004E1D1B /* Main */,
 				349AC976237B4631004E1D1B /* AppDelegate.swift */,
@@ -141,6 +165,8 @@
 				349AC9B2237B6518004E1D1B /* Main.storyboard */,
 				349AC9A7237B4716004E1D1B /* MainViewController.swift */,
 				349AC9A9237B4AAD004E1D1B /* MainView.swift */,
+				341E04ED237DE13500951E89 /* MainNavigator.swift */,
+				341E04EF237DE1EC00951E89 /* Seats */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -148,17 +174,20 @@
 		349AC9AC237B5043004E1D1B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				343B5376237DF6C5005A03F5 /* Shuffler.swift */,
 				349AC9AD237B504C004E1D1B /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		349AC9AF237B5294004E1D1B /* Navigation Bar */ = {
+		349AC9AF237B5294004E1D1B /* Navigation Controller */ = {
 			isa = PBXGroup;
 			children = (
+				341E04F2237DED3000951E89 /* NavigationController.swift */,
 				349AC9B0237B529F004E1D1B /* NavigationBar.swift */,
+				341E04F4237DEFE700951E89 /* Navigation.storyboard */,
 			);
-			path = "Navigation Bar";
+			path = "Navigation Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341E04F5237DEFE700951E89 /* Navigation.storyboard in Resources */,
 				349AC9B4237B6518004E1D1B /* Main.storyboard in Resources */,
 				349AC983237B4631004E1D1B /* LaunchScreen.storyboard in Resources */,
 				349AC980237B4631004E1D1B /* Assets.xcassets in Resources */,
@@ -292,12 +322,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341E04EE237DE13500951E89 /* MainNavigator.swift in Sources */,
 				349AC9A8237B4717004E1D1B /* MainViewController.swift in Sources */,
 				349AC9AE237B504C004E1D1B /* Colors.swift in Sources */,
+				341E04F1237DE20F00951E89 /* SeatsViewController.swift in Sources */,
+				341E04F3237DED3000951E89 /* NavigationController.swift in Sources */,
 				349AC9AA237B4AAD004E1D1B /* MainView.swift in Sources */,
+				343B5377237DF6C5005A03F5 /* Shuffler.swift in Sources */,
+				343B5379237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift in Sources */,
 				349AC977237B4631004E1D1B /* AppDelegate.swift in Sources */,
 				349AC979237B4631004E1D1B /* SceneDelegate.swift in Sources */,
 				349AC9B1237B529F004E1D1B /* NavigationBar.swift in Sources */,
+				343B537B237DFC18005A03F5 /* SeatCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
