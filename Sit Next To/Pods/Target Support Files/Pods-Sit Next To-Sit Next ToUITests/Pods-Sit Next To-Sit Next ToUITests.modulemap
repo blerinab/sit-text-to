@@ -1,0 +1,6 @@
+framework module Pods_Sit_Next_To_Sit_Next_ToUITests {
+  umbrella header "Pods-Sit Next To-Sit Next ToUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
