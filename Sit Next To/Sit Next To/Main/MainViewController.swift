@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
     
     private var shuffler: Shuffler?
     
+    private let maximumNumberOfSeats = 12
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -32,12 +34,23 @@ class MainViewController: UIViewController {
         
         view.shuffle = { [unowned self] number in
             // TODO: Show adds
-            if let shuffler = self.shuffler {
+           
+            if number > self.maximumNumberOfSeats {
+                self.showAlertFor(maximumSeats: self.maximumNumberOfSeats)
+            }else if let shuffler = self.shuffler {
                 self.navigateToSeats(withSeatNumbers: shuffler.shuffledNumbers(withTotalOf: number))
             }
         }
     }
     
+    private func showAlertFor(maximumSeats: Int) {
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        let alertController = UIAlertController(title: "Maximum seats", message: "The maximum allowed number of seats in a table is \(maximumSeats). Please choose a lower number", preferredStyle: .alert)
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
     // MARK: - Navigation
     
     private func navigateToSeats(withSeatNumbers seats: [Int]) {

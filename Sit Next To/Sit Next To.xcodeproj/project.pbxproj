@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		343B5379237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B5378237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift */; };
 		343B537B237DFC18005A03F5 /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B537A237DFC18005A03F5 /* SeatCollectionViewCell.swift */; };
 		343B538323840B3F005A03F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B538123840B3F005A03F5 /* LaunchScreen.storyboard */; };
+		3480C1A52386C8A20006F58C /* SelfSizingUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480C1A42386C8A20006F58C /* SelfSizingUICollectionView.swift */; };
 		349AC977237B4631004E1D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC976237B4631004E1D1B /* AppDelegate.swift */; };
 		349AC979237B4631004E1D1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC978237B4631004E1D1B /* SceneDelegate.swift */; };
 		349AC980237B4631004E1D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349AC97F237B4631004E1D1B /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		343B537A237DFC18005A03F5 /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
 		343B538223840B3F005A03F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		344DF40C36ABC700C4597057 /* Pods-Sit Next ToTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sit Next ToTests.release.xcconfig"; path = "Target Support Files/Pods-Sit Next ToTests/Pods-Sit Next ToTests.release.xcconfig"; sourceTree = "<group>"; };
+		3480C1A42386C8A20006F58C /* SelfSizingUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingUICollectionView.swift; sourceTree = "<group>"; };
 		349AC973237B4631004E1D1B /* Sit Next To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sit Next To.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		349AC976237B4631004E1D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349AC978237B4631004E1D1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +123,6 @@
 				B76567AB6050AA6EF0F0D931 /* Pods-Sit Next ToTests.debug.xcconfig */,
 				344DF40C36ABC700C4597057 /* Pods-Sit Next ToTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +151,14 @@
 				343B538123840B3F005A03F5 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		3480C1A32386C88B0006F58C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3480C1A42386C8A20006F58C /* SelfSizingUICollectionView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		349AC96A237B4631004E1D1B = {
@@ -182,6 +191,7 @@
 				343B537D23840AE0005A03F5 /* Launch */,
 				349AC9AF237B5294004E1D1B /* Navigation Controller */,
 				349AC9AC237B5043004E1D1B /* Utils */,
+				3480C1A32386C88B0006F58C /* Shared */,
 				349AC9A6237B46F7004E1D1B /* Main */,
 				343B537C23840AD5005A03F5 /* Supporting Files */,
 			);
@@ -493,6 +503,7 @@
 				341E04F1237DE20F00951E89 /* SeatsViewController.swift in Sources */,
 				341E04F3237DED3000951E89 /* NavigationController.swift in Sources */,
 				349AC9AA237B4AAD004E1D1B /* MainView.swift in Sources */,
+				3480C1A52386C8A20006F58C /* SelfSizingUICollectionView.swift in Sources */,
 				343B5377237DF6C5005A03F5 /* Shuffler.swift in Sources */,
 				343B5379237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift in Sources */,
 				349AC977237B4631004E1D1B /* AppDelegate.swift in Sources */,
