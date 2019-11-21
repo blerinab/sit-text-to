@@ -35,26 +35,23 @@ class MainViewController: UIViewController {
         view.shuffle = { [unowned self] number in
             // TODO: Show adds
            
-            if number > self.maximumNumberOfSeats {
-                self.showAlertFor(maximumSeats: self.maximumNumberOfSeats)
-            }else if let shuffler = self.shuffler {
+            if number == 0  {
+                self.showAlert(withTitle: "Seats", message: "Please add a seat number bigger than 0.", cancelActionTitle: "OK")
+            } else if number > self.maximumNumberOfSeats {
+                self.showAlert(withTitle: "Maximum seats", message: "The maximum allowed number of seats in a table is \(self.maximumNumberOfSeats). Please choose a lower number", cancelActionTitle: "OK")
+            } else if let shuffler = self.shuffler {
                 self.navigateToSeats(withSeatNumbers: shuffler.shuffledNumbers(withTotalOf: number))
             }
         }
     }
     
-    private func showAlertFor(maximumSeats: Int) {
-        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        
-        let alertController = UIAlertController(title: "Maximum seats", message: "The maximum allowed number of seats in a table is \(maximumSeats). Please choose a lower number", preferredStyle: .alert)
-        alertController.addAction(okAction)
-        
-        present(alertController, animated: true, completion: nil)
-    }
     // MARK: - Navigation
     
     private func navigateToSeats(withSeatNumbers seats: [Int]) {
-        navigator?.navigateToSeatsViewController(withSeatNumbers: seats)
+        navigator?.navigateToSeatsViewController(withSeatNumbers: seats, completion: { [weak view] in
+            guard let view = view as? MainView else { return }
+            view.resetTextField()
+        })
     }
 
 }

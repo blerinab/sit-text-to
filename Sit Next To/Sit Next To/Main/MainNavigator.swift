@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainNavigator {
-    func navigateToSeatsViewController(withSeatNumbers: [Int])
+    func navigateToSeatsViewController(withSeatNumbers: [Int], completion: (() -> Void)?)
 }
 
 class MainNavigationHandler: MainNavigator {
@@ -27,19 +27,19 @@ class MainNavigationHandler: MainNavigator {
         return viewController
     }
     
-    func navigateToSeatsViewController(withSeatNumbers numbers: [Int]) {
+    func navigateToSeatsViewController(withSeatNumbers numbers: [Int], completion: (() -> Void)? = nil) {
         guard let seatsViewController = viewController(withIdentifier: "SeatsViewController") as? SeatsViewController else { return }
 
         seatsViewController.seatNumbers = numbers
         seatsViewController.shuffler = ShufflingHandler()
         
         seatsViewController.needsNewSeats = { [unowned seatsViewController] in
-            seatsViewController.dismiss(animated: true, completion: nil)
+            seatsViewController.dismiss(animated: true, completion: completion)
         }
         
         if let navigationController = NavigationController.create(withRootViewController: seatsViewController) {
             navigationController.modalPresentationStyle = .fullScreen
-            viewController?.present(navigationController, animated: false, completion: nil)
+            viewController?.present(navigationController, animated: false, completion: completion)
         }
     }
 }

@@ -14,9 +14,15 @@ class MainView: UIView {
     
     @IBOutlet private weak var numberTextField: UITextField!
     
+    // MARK: - Actions
+    
     @IBAction private func randomize(_ sender: UIButton) {
         if let numberText = numberTextField.text, let number = Int(numberText) {
             shuffle?(number)
         }
+    }
+    
+    func resetTextField() {
+        numberTextField.text = nil
     }
 }
