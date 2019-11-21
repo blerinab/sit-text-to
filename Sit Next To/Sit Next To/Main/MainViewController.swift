@@ -19,11 +19,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
         shuffler = ShufflingHandler()
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         navigator = MainNavigationHandler(viewController: self, storyboard: storyboard)
-        
+
         handleShuffleAction()
     }
     
@@ -32,17 +35,19 @@ class MainViewController: UIViewController {
     private func handleShuffleAction() {
         guard let view = view as? MainView else { return }
         
-        view.shuffle = { [unowned self] number in
-            // TODO: Show adds
-           
+        view.shuffle = { [unowned self] number in           
             if number == 0  {
-                self.showAlert(withTitle: "Seats", message: "Please add a seat number bigger than 0.", cancelActionTitle: "OK")
+                self.showAlert(withTitle: "Seats", message: "Please add a number of seats bigger than 0.", cancelActionTitle: "OK")
             } else if number > self.maximumNumberOfSeats {
                 self.showAlert(withTitle: "Maximum seats", message: "The maximum allowed number of seats in a table is \(self.maximumNumberOfSeats). Please choose a lower number", cancelActionTitle: "OK")
             } else if let shuffler = self.shuffler {
                 self.navigateToSeats(withSeatNumbers: shuffler.shuffledNumbers(withTotalOf: number))
             }
         }
+    }
+    
+    @objc private func dismissKeyboard() {
+      view.endEditing(true)
     }
     
     // MARK: - Navigation

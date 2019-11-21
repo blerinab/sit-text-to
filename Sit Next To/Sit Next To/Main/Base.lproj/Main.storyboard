@@ -37,7 +37,7 @@ And write below the number of the people sitting together.
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of seats" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPX-rB-2T7">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of seats" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPX-rB-2T7">
                                                 <rect key="frame" x="102" y="204" width="178" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="XMC-7L-Wqk"/>
@@ -153,7 +153,7 @@ And write below the number of the people sitting together.
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="48f-nT-iQ8" customClass="SelfSizingCollectionView" customModule="Sit_Next_To" customModuleProvider="target">
-                                <rect key="frame" x="16" y="174" width="382" height="648"/>
+                                <rect key="frame" x="16" y="174" width="382" height="572"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="200" id="8k1-Ud-46K"/>
@@ -205,20 +205,36 @@ And write below the number of the people sitting together.
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcz-3U-tJH">
+                                <rect key="frame" x="16" y="786" width="382" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EVa-tL-CJc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wcz-3U-tJH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="48f-nT-iQ8" secondAttribute="bottom" constant="40" id="Mwl-Js-cBQ"/>
                             <constraint firstItem="qmS-0e-8ue" firstAttribute="top" secondItem="UGG-Jc-aWh" secondAttribute="top" constant="40" id="P3g-b0-JM7"/>
                             <constraint firstItem="CUY-NF-pZb" firstAttribute="top" secondItem="UGG-Jc-aWh" secondAttribute="top" constant="-10" id="QBg-0R-0cb"/>
                             <constraint firstItem="CUY-NF-pZb" firstAttribute="leading" secondItem="UGG-Jc-aWh" secondAttribute="leading" id="Qcc-KN-Hml"/>
                             <constraint firstItem="qmS-0e-8ue" firstAttribute="leading" secondItem="UGG-Jc-aWh" secondAttribute="leading" constant="16" id="RiR-yt-nax"/>
-                            <constraint firstItem="CUY-NF-pZb" firstAttribute="bottom" secondItem="48f-nT-iQ8" secondAttribute="bottom" constant="-40" id="SdH-5k-oUC"/>
+                            <constraint firstItem="Wcz-3U-tJH" firstAttribute="bottom" secondItem="UGG-Jc-aWh" secondAttribute="bottom" constant="-16" id="SG4-4B-l5G"/>
+                            <constraint firstItem="Wcz-3U-tJH" firstAttribute="leading" secondItem="UGG-Jc-aWh" secondAttribute="leading" constant="16" id="W5x-rk-yss"/>
+                            <constraint firstItem="CUY-NF-pZb" firstAttribute="bottom" secondItem="48f-nT-iQ8" secondAttribute="bottom" constant="-40" id="XmN-uq-s5g"/>
                             <constraint firstItem="48f-nT-iQ8" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="UGG-Jc-aWh" secondAttribute="bottom" constant="-40" id="ZSb-yX-OD9"/>
                             <constraint firstItem="UGG-Jc-aWh" firstAttribute="trailing" secondItem="qmS-0e-8ue" secondAttribute="trailing" constant="16" id="cpR-PZ-zmy"/>
                             <constraint firstItem="UGG-Jc-aWh" firstAttribute="trailing" secondItem="CUY-NF-pZb" secondAttribute="trailing" id="mlB-iA-xeO"/>
                             <constraint firstItem="48f-nT-iQ8" firstAttribute="top" secondItem="qmS-0e-8ue" secondAttribute="bottom" constant="40" id="orw-NG-qJs"/>
                             <constraint firstItem="UGG-Jc-aWh" firstAttribute="trailing" secondItem="48f-nT-iQ8" secondAttribute="trailing" constant="16" id="se2-9U-kaE"/>
                             <constraint firstItem="48f-nT-iQ8" firstAttribute="leading" secondItem="UGG-Jc-aWh" secondAttribute="leading" constant="16" id="yPB-lX-IoW"/>
+                            <constraint firstItem="UGG-Jc-aWh" firstAttribute="trailing" secondItem="Wcz-3U-tJH" secondAttribute="trailing" constant="16" id="zGV-X7-UEj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UGG-Jc-aWh"/>
                     </view>
@@ -235,6 +251,7 @@ And write below the number of the people sitting together.
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="adContainerView" destination="Wcz-3U-tJH" id="sWb-Lr-Emr"/>
                         <outlet property="collectionView" destination="48f-nT-iQ8" id="TeZ-X4-wxR"/>
                         <outlet property="peopleLabel" destination="qmS-0e-8ue" id="U2s-VH-6aP"/>
                     </connections>

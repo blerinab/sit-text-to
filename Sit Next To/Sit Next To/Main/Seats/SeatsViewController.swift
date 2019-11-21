@@ -13,6 +13,8 @@ class SeatsViewController: UIViewController {
     // Use to close this view controller.
     var needsNewSeats: (() -> Void)?
     
+    var adController: AdController?
+    
     var shuffler: Shuffler?
     
     var seatNumbers: [Int]? {
@@ -26,6 +28,8 @@ class SeatsViewController: UIViewController {
     
     @IBOutlet private weak var peopleLabel: UILabel!
     @IBOutlet private var collectionView: UICollectionView!
+
+    @IBOutlet weak var adContainerView: UIView!
     
     private var seatsCollectionViewDataSource: SeatsCollectionViewDataSource?
     
@@ -38,7 +42,10 @@ class SeatsViewController: UIViewController {
         
         // Data source
         setupCollectionView()
-
+        setupAdView()
+        
+        adController?.addAdView(toViewController: self)
+        adController?.loadAd()
     }
     
     // MARK: - View
@@ -51,6 +58,18 @@ class SeatsViewController: UIViewController {
         }
         
         collectionView.dataSource = seatsCollectionViewDataSource
+    }
+    
+    private func setupAdView() {
+    
+        guard let adController = adController else { return }
+        let adView = adController.adView
+        adContainerView.addSubview(adController.adView)
+        adView.translatesAutoresizingMaskIntoConstraints = false
+        adView.leadingAnchor.constraint(equalTo: adContainerView.leadingAnchor).isActive = true
+        adView.trailingAnchor.constraint(equalTo: adContainerView.trailingAnchor).isActive = true
+        adView.bottomAnchor.constraint(equalTo: adContainerView.bottomAnchor).isActive = true
+        adView.topAnchor.constraint(equalTo: adContainerView.topAnchor).isActive = true
     }
     
     // MARK: - Randomize
@@ -82,9 +101,9 @@ class SeatsViewController: UIViewController {
         needsNewSeats?()
     }
     
-    
     @IBAction private func randomizeSeatsAction(_ sender: UIBarButtonItem) {
         seatNumbers = shuffleSeats()
+        
     }
 }
 

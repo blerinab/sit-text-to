@@ -17,6 +17,7 @@
 		343B538323840B3F005A03F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343B538123840B3F005A03F5 /* LaunchScreen.storyboard */; };
 		3480C1A52386C8A20006F58C /* SelfSizingUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480C1A42386C8A20006F58C /* SelfSizingUICollectionView.swift */; };
 		3480C1A72386C9340006F58C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480C1A62386C9340006F58C /* UIViewControllerExtension.swift */; };
+		34890DC7238731F600F73BA0 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34890DC6238731F600F73BA0 /* AdController.swift */; };
 		349AC977237B4631004E1D1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC976237B4631004E1D1B /* AppDelegate.swift */; };
 		349AC979237B4631004E1D1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC978237B4631004E1D1B /* SceneDelegate.swift */; };
 		349AC980237B4631004E1D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349AC97F237B4631004E1D1B /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		344DF40C36ABC700C4597057 /* Pods-Sit Next ToTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sit Next ToTests.release.xcconfig"; path = "Target Support Files/Pods-Sit Next ToTests/Pods-Sit Next ToTests.release.xcconfig"; sourceTree = "<group>"; };
 		3480C1A42386C8A20006F58C /* SelfSizingUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingUICollectionView.swift; sourceTree = "<group>"; };
 		3480C1A62386C9340006F58C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		34890DC6238731F600F73BA0 /* AdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdController.swift; sourceTree = "<group>"; };
 		349AC973237B4631004E1D1B /* Sit Next To.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sit Next To.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		349AC976237B4631004E1D1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349AC978237B4631004E1D1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				341E04F0237DE20F00951E89 /* SeatsViewController.swift */,
 				343B5378237DF9C1005A03F5 /* SeatsCollectionViewDataSource.swift */,
 				343B537A237DFC18005A03F5 /* SeatCollectionViewCell.swift */,
+				34890DC6238731F600F73BA0 /* AdController.swift */,
 			);
 			path = Seats;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				349AC9A8237B4717004E1D1B /* MainViewController.swift in Sources */,
 				349AC9AE237B504C004E1D1B /* Colors.swift in Sources */,
 				341E04F1237DE20F00951E89 /* SeatsViewController.swift in Sources */,
+				34890DC7238731F600F73BA0 /* AdController.swift in Sources */,
 				341E04F3237DED3000951E89 /* NavigationController.swift in Sources */,
 				349AC9AA237B4AAD004E1D1B /* MainView.swift in Sources */,
 				3480C1A52386C8A20006F58C /* SelfSizingUICollectionView.swift in Sources */,
@@ -687,7 +691,9 @@
 			baseConfigurationReference = 4FD2C2C0103BFEB80A8CE8F8 /* Pods-Sit Next To.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R996Q9XUQF;
 				INFOPLIST_FILE = "Sit Next To/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -696,6 +702,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Sit-Next-To";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -706,7 +713,9 @@
 			baseConfigurationReference = 1471DBAF90A5BC6B4F7D01A4 /* Pods-Sit Next To.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R996Q9XUQF;
 				INFOPLIST_FILE = "Sit Next To/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -715,6 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Sit-Next-To";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

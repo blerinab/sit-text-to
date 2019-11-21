@@ -32,7 +32,8 @@ class MainNavigationHandler: MainNavigator {
 
         seatsViewController.seatNumbers = numbers
         seatsViewController.shuffler = ShufflingHandler()
-        
+        seatsViewController.adController = AdControllerHandler()
+
         seatsViewController.needsNewSeats = { [unowned seatsViewController] in
             seatsViewController.dismiss(animated: true, completion: completion)
         }
