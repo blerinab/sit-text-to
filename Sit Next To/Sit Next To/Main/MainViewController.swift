@@ -14,7 +14,8 @@ class MainViewController: UIViewController {
     
     private var shuffler: Shuffler?
     
-    private let maximumNumberOfSeats = 12
+    private let minimumNumberOfSeats = 4
+    private let maximumNumberOfSeats = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,9 @@ class MainViewController: UIViewController {
             if number == 0  {
                 self.showAlert(withTitle: "Seats", message: "Please add a number of seats bigger than 0.", cancelActionTitle: "OK")
             } else if number > self.maximumNumberOfSeats {
-                self.showAlert(withTitle: "Maximum seats", message: "The maximum allowed number of seats in a table is \(self.maximumNumberOfSeats). Please choose a lower number", cancelActionTitle: "OK")
+                self.showAlert(withTitle: "Maximum seats", message: "The maximum number of seats allowed in a table is \(self.maximumNumberOfSeats). Please choose a lower number", cancelActionTitle: "OK.")
+            } else if number < self.minimumNumberOfSeats {
+                self.showAlert(withTitle: "Minimum seats", message: "The minimum number of seats allowed in a table is \(self.minimumNumberOfSeats). Please choose a higher number", cancelActionTitle: "OK.")
             } else if let shuffler = self.shuffler {
                 self.navigateToSeats(withSeatNumbers: shuffler.shuffledNumbers(withTotalOf: number))
             }
@@ -47,7 +50,7 @@ class MainViewController: UIViewController {
     }
     
     @objc private func dismissKeyboard() {
-      view.endEditing(true)
+        view.endEditing(true)
     }
     
     // MARK: - Navigation

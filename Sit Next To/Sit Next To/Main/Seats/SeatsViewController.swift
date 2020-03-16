@@ -50,13 +50,14 @@ class SeatsViewController: UIViewController {
     
     // MARK: - View
     private func setupCollectionView() {
-        collectionView.delegate = self
+//        collectionView.delegate = self
         seatsCollectionViewDataSource = SeatsCollectionViewDataSource()
         seatsCollectionViewDataSource?.seats = seatNumbers
         seatsCollectionViewDataSource?.refresh = { [unowned self] in
             self.collectionView.reloadData()
         }
         
+        collectionView.collectionViewLayout = CircleCollectionViewLayout()
         collectionView.dataSource = seatsCollectionViewDataSource
     }
     
@@ -107,32 +108,32 @@ class SeatsViewController: UIViewController {
     }
 }
 
-extension SeatsViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let seatNumbers = seatNumbers else { return CGSize.zero }
-        
-        let paddingSpace = sectionInsets.left + sectionInsets.right
-        var availableWidth = collectionView.frame.width - paddingSpace - 40
-
-        var itemsPerRow: CGFloat = 2
-
-        if seatNumbers.count % 2 != 0 { // If odd number of items
-            if indexPath.row == seatNumbers.count - 1 {
-                itemsPerRow = 1
-                availableWidth = availableWidth + 40
-            }
-        }
-        
-        let widthPerItem = availableWidth / itemsPerRow
-        
-        return CGSize(width: widthPerItem, height: 80)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
-    }
-}
+//extension SeatsViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        guard let seatNumbers = seatNumbers else { return CGSize.zero }
+//
+//        let paddingSpace = sectionInsets.left + sectionInsets.right
+//        var availableWidth = collectionView.frame.width - paddingSpace - 40
+//
+//        var itemsPerRow: CGFloat = 2
+//
+//        if seatNumbers.count % 2 != 0 { // If odd number of items
+//            if indexPath.row == seatNumbers.count - 1 {
+//                itemsPerRow = 1
+//                availableWidth = availableWidth + 40
+//            }
+//        }
+//
+//        let widthPerItem = availableWidth / itemsPerRow
+//
+//        return CGSize(width: widthPerItem, height: 80)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return sectionInsets
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return sectionInsets.left
+//    }
+//}

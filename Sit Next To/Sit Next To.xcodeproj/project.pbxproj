@@ -28,6 +28,8 @@
 		349AC9AE237B504C004E1D1B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC9AD237B504C004E1D1B /* Colors.swift */; };
 		349AC9B1237B529F004E1D1B /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349AC9B0237B529F004E1D1B /* NavigationBar.swift */; };
 		349AC9B4237B6518004E1D1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349AC9B2237B6518004E1D1B /* Main.storyboard */; };
+		4DEEA1262420060D00070B09 /* CircleCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEA1252420060D00070B09 /* CircleCollectionViewLayout.swift */; };
+		4DEEA1282420062000070B09 /* CGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEA1272420062000070B09 /* CGExtension.swift */; };
 		E88468E7A430B6DB87C5D274 /* Pods_Sit_Next_ToTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1811318ADB2FEB173A2E188 /* Pods_Sit_Next_ToTests.framework */; };
 		EDEF932BAB6F9745B24D46C4 /* Pods_Sit_Next_To.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176D3AD194F8FD932561A332 /* Pods_Sit_Next_To.framework */; };
 		F31BA321D84DEA7919509F4B /* Pods_Sit_Next_To_Sit_Next_ToUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8616B9A9DE7ED5AE1E068AA5 /* Pods_Sit_Next_To_Sit_Next_ToUITests.framework */; };
@@ -83,6 +85,8 @@
 		349AC9B0237B529F004E1D1B /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		349AC9B3237B6518004E1D1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37E8BE9541A69B7AD18C958A /* Pods-Sit Next To-Sit Next ToUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sit Next To-Sit Next ToUITests.release.xcconfig"; path = "Target Support Files/Pods-Sit Next To-Sit Next ToUITests/Pods-Sit Next To-Sit Next ToUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DEEA1252420060D00070B09 /* CircleCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCollectionViewLayout.swift; sourceTree = "<group>"; };
+		4DEEA1272420062000070B09 /* CGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtension.swift; sourceTree = "<group>"; };
 		4FD2C2C0103BFEB80A8CE8F8 /* Pods-Sit Next To.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sit Next To.debug.xcconfig"; path = "Target Support Files/Pods-Sit Next To/Pods-Sit Next To.debug.xcconfig"; sourceTree = "<group>"; };
 		8616B9A9DE7ED5AE1E068AA5 /* Pods_Sit_Next_To_Sit_Next_ToUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sit_Next_To_Sit_Next_ToUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76567AB6050AA6EF0F0D931 /* Pods-Sit Next ToTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sit Next ToTests.debug.xcconfig"; path = "Target Support Files/Pods-Sit Next ToTests/Pods-Sit Next ToTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				3480C1A42386C8A20006F58C /* SelfSizingUICollectionView.swift */,
+				4DEEA1252420060D00070B09 /* CircleCollectionViewLayout.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				343B5376237DF6C5005A03F5 /* Shuffler.swift */,
 				349AC9AD237B504C004E1D1B /* Colors.swift */,
 				3480C1A62386C9340006F58C /* UIViewControllerExtension.swift */,
+				4DEEA1272420062000070B09 /* CGExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				349AC9A8237B4717004E1D1B /* MainViewController.swift in Sources */,
 				349AC9AE237B504C004E1D1B /* Colors.swift in Sources */,
 				341E04F1237DE20F00951E89 /* SeatsViewController.swift in Sources */,
+				4DEEA1262420060D00070B09 /* CircleCollectionViewLayout.swift in Sources */,
 				34890DC7238731F600F73BA0 /* AdController.swift in Sources */,
 				341E04F3237DED3000951E89 /* NavigationController.swift in Sources */,
 				349AC9AA237B4AAD004E1D1B /* MainView.swift in Sources */,
@@ -518,6 +525,7 @@
 				349AC9B1237B529F004E1D1B /* NavigationBar.swift in Sources */,
 				3480C1A72386C9340006F58C /* UIViewControllerExtension.swift in Sources */,
 				343B537B237DFC18005A03F5 /* SeatCollectionViewCell.swift in Sources */,
+				4DEEA1282420062000070B09 /* CGExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,8 +699,9 @@
 			baseConfigurationReference = 4FD2C2C0103BFEB80A8CE8F8 /* Pods-Sit Next To.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = QDVY6GSBCP;
 				INFOPLIST_FILE = "Sit Next To/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -702,7 +711,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.sitnextto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Development;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -713,8 +722,9 @@
 			baseConfigurationReference = 1471DBAF90A5BC6B4F7D01A4 /* Pods-Sit Next To.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = QDVY6GSBCP;
 				INFOPLIST_FILE = "Sit Next To/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -724,7 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.sitnextto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Distribution;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
